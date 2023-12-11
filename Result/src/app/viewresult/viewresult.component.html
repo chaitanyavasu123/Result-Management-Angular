@@ -1,0 +1,36 @@
+<body>
+
+ 
+    <p><a class="link-opacity-10-hover" href=""><h5><b><u>Back</u></b></h5></a></p>
+    <br><br>
+  <div class="fixed-header mt-5">
+    <b>RESULT</b>
+  </div>
+  <br>
+  <form [formGroup]="viewResult" >
+    <div class="row mb-3 mt-3">
+      <label for="rollno" class="col-sm-2 col-form-label " style="margin-top: 10px;">RollNo </label>
+      <div class="col-sm-10">
+        <input type="rollno" class="form-control" id="rollno" name="rollno" style="margin-top: 10px;" formControlName="rollno" readonly>
+      </div>
+    </div>
+    <div class="row mb-3 mt-3">
+      <label for="name" class="col-sm-2 col-form-label " style="margin-top: 10px;">Name </label>
+      <div class="col-sm-10">
+        <input type="name" class="form-control" id="name" name="name" style="margin-top: 10px;" formControlName="name" readonly>
+      </div>
+    </div>
+    <div class="row mb-3 mt-3">
+      <label for="dob" class="col-sm-2 col-form-label " style="margin-top: 10px;">DOB </label>
+      <div class="col-sm-10">
+        <input type="dob" class="form-control" id="dob" name="dob" style="margin-top: 10px;" formControlName="dob" readonly>
+      </div>
+    </div>
+    <div class="row mb-3 mt-3">
+      <label for="score" class="col-sm-2 col-form-label " style="margin-top: 10px;">Score </label>
+      <div class="col-sm-10">
+        <input type="score" class="form-control" id="score" name="score" style="margin-top: 10px;" formControlName="score" readonly>
+      </div>
+    </div>
+  </form>
+</body>

@@ -1,0 +1,33 @@
+
+
+<body>
+            <p><a class="link-opacity-10-hover" href=""><h5><b><u>Back</u></b></h5></a></p>
+            <br><br>
+        <div class="fixed-header mt-5">
+            <b>TEACHER LOGIN</b><br>
+            <label *ngIf="error" style="color: red;">WRONG CREDENTIALS</label>
+        </div>
+        <form [formGroup]="teacherLogin" (ngSubmit)="login()" >
+            <div class="row mb-3 mt-5 ">
+            
+                <label for="name" class="col-sm-2 col-form-label ">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" id="name" name="name"  formControlName="name">
+                </div>
+                <span class="error" *ngIf="name?.invalid && name?.touched">Name is required</span>
+            </div>
+            <div class="row mb-3 mt-3 ">
+                <label for="Password" class="col-sm-2 col-form-label ">Password</label>
+                <div class="col-sm-10 ">
+                    <input type="Password" id="Pass" name="pass"   formControlName="pass">
+                   
+                </div>
+                <span class="error" *ngIf="pass?.invalid && pass?.touched">Password is required</span>
+            </div>
+
+
+            <button type="submit" [disabled]="teacherLogin.invalid" style="margin-top: 20px;" class="btn btn-success">Sign in</button>
+
+        </form>
+</body>
+

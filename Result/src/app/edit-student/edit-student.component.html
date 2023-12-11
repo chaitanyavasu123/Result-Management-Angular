@@ -1,0 +1,47 @@
+
+<body>
+  <div class="logbutton">
+    <button type="button" (click)="logout()" class="btn btn-warning">
+     <b>LOGOUT</b>
+ 
+   </button>
+   </div>
+    <div class="fixed-header mt-5">
+      <p><a class="link-opacity-10-hover" href=""><h5><b><u>Back</u></b></h5></a></p>
+      <br>
+      <b> EDIT RESULT</b>
+      
+    </div>
+    <br>
+    <form [formGroup]="editResult" (ngSubmit)="edit()" >
+      <div class="row mb-2 mt-2">
+        <label for="rollno" style="margin-top: 10px;" class="col-sm-2 col-form-label ">RollNo</label>
+        <div class="col-sm-10">
+          <input type="rollno" style="margin-top: 10px;" class="form-control" id="rollno" name="rollno" formControlName="rollno" 
+            readonly>
+        </div>
+      </div>
+      <div class="row mb-2 mt-2">
+        <label for="name" style="margin-top: 10px;" class="col-sm-2 col-form-label ">Name</label>
+        <div class="col-sm-10">
+          <input type="name" style="margin-top: 10px;" class="form-control" id="name" name="name" formControlName="name"  >
+        </div>
+      </div>
+      <div class="row mb-2 mt-2">
+        <label for="dob" style="margin-top: 10px;"  class="col-sm-2 col-form-label ">DOB</label>
+        <div class="col-sm-10">
+          <input type="dob" style="margin-top: 10px;" class="form-control" placeholder="dd.mm.yyyy" id="dob" name="dob"  formControlName="dob" >
+        </div>
+      </div>
+      <div class="row mb-2 mt-2">
+        <label for="score" style="margin-top: 10px;" class="col-sm-2 col-form-label ">Score</label>
+        <div class="col-sm-10">
+          <input type="score"  style="margin-top: 10px;"class="form-control" id="score" name="score"  formControlName="score">
+        </div>
+      </div>
+
+      <button type="submit" style="margin-top: 10px;"  [disabled]="editResult.invalid"class="btn btn-success">EDIT</button>
+
+    </form>
+</body>
+
